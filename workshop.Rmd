@@ -1,0 +1,344 @@
+---
+title: "workshop"
+author: "Maxwel Coura Oliveira"
+date: "5/30/2019"
+output:
+  word_document: default
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r include=FALSE}
+library(ggplot2)
+library(scales)
+library(tidyverse)
+library(magick)
+library(here)
+library(ggimage)
+```
+
+```{r}
+data <- read_csv("data.csv")
+```
+
+
+```{r include=FALSE}
+q1 <- data %>% 
+  filter(question == "1")
+
+q1$answer <- factor(q1$answer, levels=c("Other", "Industry Rep", "Farmer/producer", "Extension/State/Fed agency", "Agronomist/Crop Advisor"), labels=c("Other", "Industry Rep", "Farmer/producer", "Extension/State/Fed agency", "Agronomist/Crop advisor"))
+```
+
+```{r echo=FALSE}
+ggplot(q1, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "What describes your occupation(s)?") + ylab("%") +
+  geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+#   annotate(geom="text", x=3, y=50, xend=Inf, yend=Inf, label='PROOF ONLY', color='grey10', angle=45, fontface='bold', size=5, alpha=0.5) +
+    annotate("text", x = 1, y=97, label = c("n=33", "n=35", "n=44", "n=36"), size=4) +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=18, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q1.pdf", height = 6, width=10, dpi=600)
+```
+
+
+
+
+
+```{r include=FALSE}
+q2 <- data %>% 
+  filter(question == "2")
+```
+
+```{r echo=FALSE}
+ggplot(q2, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.3, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "Are you a CCA?") + ylab("%") +
+  geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+      annotate("text", x = 1, y=97, label = c("n=29", "n=28", "n=39", "n=26"), size=4) +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=18, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q2.pdf", height = 6, width=10, dpi=600)
+```
+
+
+
+
+
+```{r include=FALSE}
+q3 <- data %>% 
+  filter(question == "3")
+
+q3$answer <- factor(q3$answer, levels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"), labels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"))
+```
+
+```{r echo=FALSE}
+ggplot(q3, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "The topics presented today were valuable.") + ylab("%") +
+  geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+  scale_fill_brewer(palette = "Spectral") + ylim(0,100) +
+        annotate("text", x = 1, y=97, label = c("n=29", "n=31", "n=35", "n=26"), size=4) +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=18, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q3.pdf", height = 6, width=10, dpi=600)
+```
+
+
+
+
+
+```{r include=FALSE}
+q4 <- data %>% 
+  filter(question == "4")
+
+
+q4$answer <- factor(q4$answer, levels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"), labels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"))
+```
+
+```{r echo=FALSE}
+ggplot(q4, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "Today's presentation were unbiased.") + ylab("%") +
+  geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+          annotate("text", x = 1, y=97, label = c("n=30", "n=32", "n=39", "n=27"), size=4) +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=18, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q4.pdf", height = 6, width=10, dpi=600)
+```
+
+
+```{r include=FALSE}
+q5 <- data %>% 
+  filter(question == "5")
+
+q5$answer <- factor(q5$answer, levels=c("I don't know", "No and not aware of any nearby", "No but nearby", "Yes"), labels=c("I don't know", "No and not awere of any nearby", "No but nearby", "Yes"))
+```
+
+```{r echo=FALSE}
+ggplot(q5, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "Is waterhemp present in the fields you manage/influence?") + ylab("%") +
+    geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+            annotate("text", x = 1, y=97, label = c("n=26", "n=33", "n=35", "n=26"), size=4) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=18, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q5.pdf", height = 6, width=12, dpi=600)
+```
+
+
+
+
+
+```{r include=FALSE}
+q6 <- data %>% 
+  filter(question == "6")
+
+q6$answer <- factor(q6$answer, levels=c("81-100%", "61-80%", "41-60%", "21-40%", "1-20%", "0%"), labels=c("81-100%", "61-80%", "41-60%", "21-40%", "1-20%", "0%"))
+```
+
+```{r echo=FALSE}
+ggplot(q6, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "Is waterhemp present in the fields you manage/influence?") + ylab("%") +
+  geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+            annotate("text", x = 1, y=97, label = c("n=27", "n=31", "n=39", "n=26"), size=4) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=18, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q6.pdf", height = 6, width=10, dpi=600)
+```
+
+
+
+
+```{r include=FALSE}
+q7 <- data %>% 
+  filter(question == "7")
+
+q7$answer <- factor(q7$answer, levels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"), labels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"))
+```
+
+```{r echo=FALSE}
+ggplot(q7, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "This workshop improved your knowledge of waterhemp identification, biology, and seed disperseral.") + ylab("%") +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+    geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+            annotate("text", x = 1, y=97, label = c("n=26", "n=32", "n=36", "n=26"), size=4) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=14, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q7.pdf", height = 6, width=11, dpi=600)
+```
+
+
+
+
+
+
+```{r include=FALSE}
+q8 <- data %>% 
+  filter(question == "8")
+
+
+q8$answer <- factor(q8$answer, levels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"), labels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"))
+```
+
+```{r echo=FALSE}
+ggplot(q8, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "This workshop imporved your knowledge of herbicide resistance evolution.") + ylab("%") +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+  geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+      geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+             annotate("text", x = 1, y=97, label = c("n=22", "n=32", "n=32", "n=27"), size=4) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=16, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q8.pdf", height = 6, width=10, dpi=600)
+```
+
+
+
+
+
+
+```{r include=FALSE}
+q9 <- data %>% 
+  filter(question == "9")
+
+q9$answer <- factor(q9$answer, levels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"), labels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"))
+```
+
+```{r echo=FALSE}
+ggplot(q9, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "This workshop imporved your knowledge of waterhemp management in row crops.") + ylab("%") +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+    geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+               annotate("text", x = 1, y=97, label = c("n=30", "n=32", "n=32", "n=27"), size=4) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=15, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q9.pdf", height = 6, width=10, dpi=600)
+```
+
+
+
+```{r include=FALSE}
+q10 <- data %>% 
+  filter(question == "10")
+
+q10$answer <- factor(q10$answer, levels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"), labels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"))
+```
+
+
+```{r echo=FALSE}
+ggplot(q10, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "I will incorporate the knowledge gained today in the acres I manage/influence.") +
+               annotate("text", x = 1, y=97, label = c("n=29", "n=32", "n=39", "n=28"), size=4) +
+      geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14),  panel.grid = element_blank(), 
+        plot.title = element_text(size=16, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q10.pdf", height = 6, width=10, dpi=600)
+```
+
+
+
+
+```{r include=FALSE}
+q11 <- data %>% 
+  filter(question == "11")
+
+q11$answer <- factor(q11$answer, levels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"), labels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"))
+```
+
+```{r echo=FALSE}
+ggplot(q11, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "These weed management workshops should be offered again next year.") + ylab("%") +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+        geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+               annotate("text", x = 1, y=97, label = c("n=29", "n=33", "n=39", "n=26"), size=4) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=17, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q11.pdf", height = 6, width=10, dpi=600)
+```
+
+
+
+```{r include=FALSE}
+q12 <- data %>% 
+  filter(question == "12")
+
+q12$answer <- factor(q12$answer, levels=c(">10,000", "5,000-9,999", "2,500-4,999", "1,000-2,499", "500-999",  "200-499",  "100-199",  "<100"), labels=c(">10,000", "5,000-9,999", "2,500-4,999", "1,000-2,499", "500-999",  "200-499",  "100-199",  "<100"))
+```
+
+```{r echo=FALSE}
+ggplot(q12, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "How many acres will be affected by what you learned during today's workshop?") + ylab("%") +
+          geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,50)) +
+               annotate("text", x = 1, y=47, label = c("n=30", "n=31", "n=38", "n=27"), size=4) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=16, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q12.pdf", height = 6, width=10, dpi=600)
+```
+
+
+```{r include=FALSE}
+q13 <- data %>% 
+  filter(question == "13")
+
+q13$answer <- factor(q13$answer, levels=c("$20+", "$10-19", "$5-9", "$1-4", "$0"), labels=c("$20+", "$10-19", "$5-9", "$1-4", "$0"))
+```
+
+```{r echo=FALSE}
+ggplot(q13, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "How many $/acre do you estimate you will save or earn this growing season by the information learned at this workshop?") + ylab("%") +
+          geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,50)) +
+               annotate("text", x = 1, y=47, label = c("n=29", "n=32", "n=35", "n=26"), size=4) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=11, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q13.pdf", height = 6, width=10, dpi=600)
+```
+
+
+
+
+```{r include=FALSE}
+q14 <- data %>% 
+  filter(question == "14")
+
+q14$answer <- factor(q14$answer, levels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"), labels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"))
+```
+
+```{r echo=FALSE}
+ggplot(q14, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = " If offered, I would attend a summer field day on waterhemp management.") + ylab("%") + ylim(0,100) +
+            geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+               annotate("text", x = 1, y=97, label = c("n=26", "n=32", "n=39", "n=27"), size=4) +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=16, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q14.pdf", height = 6, width=10, dpi=600)
+```
+
+
+geom_label(aes(label=str_c(format(abs(Values)), "%")), fill="white", position = position_stack(vjust = 1), size=7) +
+
+
+```{r include=FALSE}
+q15 <- data %>% 
+  filter(question == "15")
+
+q15$answer <- factor(q15$answer, levels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"), labels=c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"))
+```
+
+```{r echo=FALSE}
+ggplot(q15, aes(x=answer, y=perc, fill=answer)) + geom_bar(stat="identity", width =0.5, color="black") + facet_wrap(~location) + coord_flip() +
+  theme_bw() + labs(title = "If offered, I would attend a combine cleaning clinic next summer/fall.") + ylab("%") +
+               annotate("text", x = 1, y=97, label = c("n=27", "n=32", "n=39", "n=26"), size=4) +
+            geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+  geom_label(aes(label=str_c(format(abs(perc)), "%")), fill="white", position = position_stack(vjust = 1), size=3) +
+  scale_fill_brewer(palette = "Spectral") + scale_y_continuous(labels = function(x) paste0(x, "%"), limits=c(0,100)) +
+  theme(axis.title = element_blank(), legend.position = "none", axis.text.x = element_text(size=14), axis.text.y = element_text(size=14), panel.grid = element_blank(), 
+        plot.title = element_text(size=18, hjust = 0.0, color="darkgreen", face="bold"), strip.text = element_text(size=14)) +
+  ggsave("q15.pdf", height = 6, width=10, dpi=600)
+```

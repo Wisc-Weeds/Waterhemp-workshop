@@ -1,0 +1,301 @@
+location,question,answer,perc,count
+Janesville,1,Farmer/producer,28,10
+Janesville,1,Agronomist/Crop Advisor,39,14
+Janesville,1,Industry Rep,6,2
+Janesville,1,Extension/State/Fed agency,22,8
+Janesville,1,Other,6,2
+Janesville,2,Yes,46,12
+Janesville,2,No,54,14
+Janesville,3,Strongly agree,81,21
+Janesville,3,Agree,19,5
+Janesville,3,Neutral,0,0
+Janesville,3,Disagree,0,0
+Janesville,3,Strongly disagree,0,0
+Janesville,4,Strongly agree,89,24
+Janesville,4,Agree,7,2
+Janesville,4,Neutral,4,1
+Janesville,4,Disagree,0,0
+Janesville,4,Strongly disagree,0,0
+Janesville,5,Yes,77,20
+Janesville,5,No but nearby,12,3
+Janesville,5,No and not aware of any nearby,8,2
+Janesville,5,I don't know ,4,1
+Janesville,6,0%,19,5
+Janesville,6,1-20%,23,6
+Janesville,6,21-40%,38,10
+Janesville,6,41-60%,8,2
+Janesville,6,61-80%,4,1
+Janesville,6,81-100%,8,2
+Janesville,7,Strongly agree,81,21
+Janesville,7,Agree,19,5
+Janesville,7,Neutral,0,0
+Janesville,7,Disagree,0,0
+Janesville,7,Strongly disagree,0,0
+Janesville,8,Strongly agree,52,14
+Janesville,8,Agree,44,12
+Janesville,8,Neutral,4,1
+Janesville,8,Disagree,0,0
+Janesville,8,Strongly disagree,0,0
+Janesville,9,Strongly agree,63,17
+Janesville,9,Agree,37,10
+Janesville,9,Neutral,0,0
+Janesville,9,Disagree,0,0
+Janesville,9,Strongly disagree,0,0
+Janesville,10,Strongly agree,57,17
+Janesville,10,Agree,36,10
+Janesville,10,Neutral,7,2
+Janesville,10,Disagree,0,0
+Janesville,10,Strongly disagree,0,0
+Janesville,11,Strongly agree,62,16
+Janesville,11,Agree,35,9
+Janesville,11,Neutral,4,1
+Janesville,11,Disagree,0,0
+Janesville,11,Strongly disagree,0,0
+Janesville,12,<100,4,1
+Janesville,12,100-199,4,1
+Janesville,12,200-499,15,4
+Janesville,12,500-999,11,3
+Janesville,12,"1,000-2,499",7,2
+Janesville,12,"2,500-4,999",19,5
+Janesville,12,"5,000-9,999",7,2
+Janesville,12,">10,000",33,9
+Janesville,13,$0 ,19,5
+Janesville,13,$1-4,23,6
+Janesville,13,$5-9,38,10
+Janesville,13,$10-19,12,3
+Janesville,13,$20+,8,2
+Janesville,14,Strongly agree,41,11
+Janesville,14,Agree,44,12
+Janesville,14,Neutral,15,4
+Janesville,14,Disagree,0,0
+Janesville,14,Strongly disagree,0,0
+Janesville,15,Strongly agree,11,3
+Janesville,15,Agree,26,7
+Janesville,15,Neutral,44,12
+Janesville,15,Disagree,19,5
+Janesville,15,Strongly disagree,0,0
+Bangor,1,Farmer/producer,60,21
+Bangor,1,Agronomist/Crop Advisor,31,11
+Bangor,1,Industry Rep,6,2
+Bangor,1,Extension/State/Fed agency,0,0
+Bangor,1,Other,3,1
+Bangor,2,Yes,25,7
+Bangor,2,No,75,21
+Bangor,3,Strongly agree,52,16
+Bangor,3,Agree,45,14
+Bangor,3,Neutral,3,1
+Bangor,3,Disagree,0,0
+Bangor,3,Strongly disagree,0,0
+Bangor,4,Strongly agree,60,16
+Bangor,4,Agree,2,13
+Bangor,4,Neutral,9,3
+Bangor,4,Disagree,0,0
+Bangor,4,Strongly disagree,0,0
+Bangor,5,Yes,67,22
+Bangor,5,No but nearby,24,8
+Bangor,5,No and not aware of any nearby,9,3
+Bangor,5,I don't know ,0,0
+Bangor,6,0%,32,10
+Bangor,6,1-20%,19,6
+Bangor,6,21-40%,16,5
+Bangor,6,41-60%,16,5
+Bangor,6,61-80%,6,2
+Bangor,6,81-100%,10,3
+Bangor,7,Strongly agree,31,10
+Bangor,7,Agree,66,21
+Bangor,7,Neutral,3,1
+Bangor,7,Disagree,0,0
+Bangor,7,Strongly disagree,0,0
+Bangor,8,Strongly agree,34,11
+Bangor,8,Agree,59,19
+Bangor,8,Neutral,3,1
+Bangor,8,Disagree,3,1
+Bangor,8,Strongly disagree,0,0
+Bangor,9,Strongly agree,31,10
+Bangor,9,Agree,66,21
+Bangor,9,Neutral,3,1
+Bangor,9,Disagree,0,0
+Bangor,9,Strongly disagree,0,0
+Bangor,10,Strongly agree,34,11
+Bangor,10,Agree,66,21
+Bangor,10,Neutral,0,2
+Bangor,10,Disagree,0,0
+Bangor,10,Strongly disagree,0,0
+Bangor,11,Strongly agree,27,9
+Bangor,11,Agree,73,24
+Bangor,11,Neutral,0,0
+Bangor,11,Disagree,0,0
+Bangor,11,Strongly disagree,0,0
+Bangor,12,<100,16,5
+Bangor,12,100-199,19,6
+Bangor,12,200-499,13,4
+Bangor,12,500-999,16,5
+Bangor,12,"1,000-2,499",13,4
+Bangor,12,"2,500-4,999",10,3
+Bangor,12,"5,000-9,999",10,3
+Bangor,12,">10,000",3,1
+Bangor,13,$0 ,44,14
+Bangor,13,$1-4,25,8
+Bangor,13,$5-9,13,4
+Bangor,13,$10-19,9,3
+Bangor,13,$20+,9,3
+Bangor,14,Strongly agree,28,9
+Bangor,14,Agree,66,21
+Bangor,14,Neutral,6,2
+Bangor,14,Disagree,0,0
+Bangor,14,Strongly disagree,0,0
+Bangor,15,Strongly agree,9,3
+Bangor,15,Agree,28,9
+Bangor,15,Neutral,47,15
+Bangor,15,Disagree,16,5
+Bangor,15,Strongly disagree,0,0
+Chippewa Falls,1,Farmer/producer,36,16
+Chippewa Falls,1,Agronomist/Crop Advisor,36,16
+Chippewa Falls,1,Industry Rep,7,3
+Chippewa Falls,1,Extension/State/Fed agency,18,8
+Chippewa Falls,1,Other,2,1
+Chippewa Falls,2,Yes,31,12
+Chippewa Falls,2,No,69,27
+Chippewa Falls,3,Strongly agree,77,27
+Chippewa Falls,3,Agree,20,7
+Chippewa Falls,3,Neutral,3,1
+Chippewa Falls,3,Disagree,0,0
+Chippewa Falls,3,Strongly disagree,0,0
+Chippewa Falls,4,Strongly agree,59,23
+Chippewa Falls,4,Agree,41,16
+Chippewa Falls,4,Neutral,0,0
+Chippewa Falls,4,Disagree,0,0
+Chippewa Falls,4,Strongly disagree,0,0
+Chippewa Falls,5,Yes,83,29
+Chippewa Falls,5,No but nearby,9,3
+Chippewa Falls,5,No and not aware of any nearby,3,1
+Chippewa Falls,5,I don't know ,6,2
+Chippewa Falls,6,0%,8,3
+Chippewa Falls,6,1-20%,49,19
+Chippewa Falls,6,21-40%,13,5
+Chippewa Falls,6,41-60%,21,8
+Chippewa Falls,6,61-80%,5,2
+Chippewa Falls,6,81-100%,5,2
+Chippewa Falls,7,Strongly agree,64,23
+Chippewa Falls,7,Agree,28,10
+Chippewa Falls,7,Neutral,8,3
+Chippewa Falls,7,Disagree,0,0
+Chippewa Falls,7,Strongly disagree,0,0
+Chippewa Falls,8,Strongly agree,46,17
+Chippewa Falls,8,Agree,49,18
+Chippewa Falls,8,Neutral,5,2
+Chippewa Falls,8,Disagree,0,0
+Chippewa Falls,8,Strongly disagree,0,0
+Chippewa Falls,9,Strongly agree,53,20
+Chippewa Falls,9,Agree,47,18
+Chippewa Falls,9,Neutral,0,0
+Chippewa Falls,9,Disagree,0,0
+Chippewa Falls,9,Strongly disagree,0,0
+Chippewa Falls,10,Strongly agree,49,19
+Chippewa Falls,10,Agree,44,17
+Chippewa Falls,10,Neutral,8,3
+Chippewa Falls,10,Disagree,0,0
+Chippewa Falls,10,Strongly disagree,0,0
+Chippewa Falls,11,Strongly agree,69,27
+Chippewa Falls,11,Agree,31,12
+Chippewa Falls,11,Neutral,0,0
+Chippewa Falls,11,Disagree,0,0
+Chippewa Falls,11,Strongly disagree,0,0
+Chippewa Falls,12,<100,8,3
+Chippewa Falls,12,100-199,8,3
+Chippewa Falls,12,200-499,8,3
+Chippewa Falls,12,500-999,8,3
+Chippewa Falls,12,"1,000-2,499",21,8
+Chippewa Falls,12,"2,500-4,999",5,2
+Chippewa Falls,12,"5,000-9,999",21,8
+Chippewa Falls,12,">10,000",21,8
+Chippewa Falls,13,$0 ,25,9
+Chippewa Falls,13,$1-4,29,10
+Chippewa Falls,13,$5-9,11,4
+Chippewa Falls,13,$10-19,31,11
+Chippewa Falls,13,$20+,3,1
+Chippewa Falls,14,Strongly agree,55,21
+Chippewa Falls,14,Agree,34,13
+Chippewa Falls,14,Neutral,11,4
+Chippewa Falls,14,Disagree,0,0
+Chippewa Falls,14,Strongly disagree,0,0
+Chippewa Falls,15,Strongly agree,3,1
+Chippewa Falls,15,Agree,31,12
+Chippewa Falls,15,Neutral,54,21
+Chippewa Falls,15,Disagree,13,5
+Chippewa Falls,15,Strongly disagree,0,0
+Appleton,1,Farmer/producer,45,15
+Appleton,1,Agronomist/Crop Advisor,15,5
+Appleton,1,Industry Rep,27,9
+Appleton,1,Extension/State/Fed agency,6,2
+Appleton,1,Other,6,2
+Appleton,2,Yes,21,6
+Appleton,2,No,79,23
+Appleton,3,Strongly agree,62,18
+Appleton,3,Agree,38,11
+Appleton,3,Neutral,0,0
+Appleton,3,Disagree,0,0
+Appleton,3,Strongly disagree,0,0
+Appleton,4,Strongly agree,70,21
+Appleton,4,Agree,27,8
+Appleton,4,Neutral,0,0
+Appleton,4,Disagree,3,1
+Appleton,4,Strongly disagree,0,0
+Appleton,5,Yes,88,23
+Appleton,5,No but nearby,12,3
+Appleton,5,No and not aware of any nearby,0,0
+Appleton,5,I don't know ,0,0
+Appleton,6,0%,7,2
+Appleton,6,1-20%,30,8
+Appleton,6,21-40%,15,4
+Appleton,6,41-60%,11,3
+Appleton,6,61-80%,7,2
+Appleton,6,81-100%,30,8
+Appleton,7,Strongly agree,46,12
+Appleton,7,Agree,46,12
+Appleton,7,Neutral,8,2
+Appleton,7,Disagree,0,0
+Appleton,7,Strongly disagree,0,0
+Appleton,8,Strongly agree,45,10
+Appleton,8,Agree,50,11
+Appleton,8,Neutral,5,1
+Appleton,8,Disagree,0,0
+Appleton,8,Strongly disagree,0,0
+Appleton,9,Strongly agree,37,11
+Appleton,9,Agree,57,17
+Appleton,9,Neutral,7,2
+Appleton,9,Disagree,0,0
+Appleton,9,Strongly disagree,0,0
+Appleton,10,Strongly agree,55,16
+Appleton,10,Agree,41,12
+Appleton,10,Neutral,3,1
+Appleton,10,Disagree,0,0
+Appleton,10,Strongly disagree,0,0
+Appleton,11,Strongly agree,38,11
+Appleton,11,Agree,48,14
+Appleton,11,Neutral,14,4
+Appleton,11,Disagree,0,0
+Appleton,11,Strongly disagree,0,0
+Appleton,12,<100,13,4
+Appleton,12,100-199,7,2
+Appleton,12,200-499,7,2
+Appleton,12,500-999,10,3
+Appleton,12,"1,000-2,499",23,7
+Appleton,12,"2,500-4,999",17,5
+Appleton,12,"5,000-9,999",3,1
+Appleton,12,">10,000",20,6
+Appleton,13,$0 ,28,8
+Appleton,13,$1-4,21,6
+Appleton,13,$5-9,28,8
+Appleton,13,$10-19,17,5
+Appleton,13,$20+,7,2
+Appleton,14,Strongly agree,45,14
+Appleton,14,Agree,42,13
+Appleton,14,Neutral,13,4
+Appleton,14,Disagree,0,0
+Appleton,14,Strongly disagree,0,0
+Appleton,15,Strongly agree,12,3
+Appleton,15,Agree,31,8
+Appleton,15,Neutral,46,12
+Appleton,15,Disagree,12,3
+Appleton,15,Strongly disagree,0,0
